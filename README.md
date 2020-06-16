@@ -2,12 +2,12 @@
 
 1) Crear un repo en github
 2) Clonarlo a la pc con visual studio
-3) iniciar el proyecto npm init 
-4) instalar dependencias : 
+3) Iniciar el proyecto npm init 
+4) Instalar dependencias : 
 	npm i express ejs morgan. Express + ejs(motor de plantillas)
 5) Crear carpeta scc -> arranca el servidor
 6) Dentro de ella crear el archivo index.js
-7) instalar nodemon
+7) Instalar nodemon
  npm i nodemon -D -> este modulo sera creado como una dependencia de desarrollo
 8) Ir a package.json -> crear el comando dev(o el nombre que nosotros queremos)
 	en script poner: 
