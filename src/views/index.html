@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    
+    <%- include ('partials/head.html')%>
+
+
+</head>
+<body>
+    
+    <%- include ('partials/navigation.html')%>
+
+    <div class="container">
+        <header class="row">
+            <div class="col col-lg-12 text-center p-5 my-5">
+               <img src="/img/sexyNerd.jpg" class="rounded-circle animate__animated animate__rotateIn img-fluid" width="500" height="500" alt="">
+            </div>
+        </header>
+    </div>
+
+    <!-- SECTION ONE-->
+    <div class="container-fluid" id="about">
+        <div class="row bg-dark text-white p-5 text-center">
+            <div class="col-sm-6">
+                <i class="fab fa-node-js fa-10x"></i> 
+            </div>
+
+            <div class="col-sm-6" >
+                <h1 class="display-5">Creatived in NodeJS</h1>
+                <p>Node.js® is a runtime environment for JavaScript built with Chrome's V8 JavaScript engine.</p>
+            </div>
+        </div>
+    </div>
+
+    <%- include ('partials/footer.html')%>
+    
+</body>
+</html>

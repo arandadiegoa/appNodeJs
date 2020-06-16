@@ -1,0 +1,68 @@
+Primera APP con Node
+
+1) Crear un repo en github
+2) Clonarlo a la pc con visual studio
+3) iniciar el proyecto npm init 
+4) instalar dependencias : 
+	npm i express ejs morgan. Express + ejs(motor de plantillas)
+5) Crear carpeta scc -> arranca el servidor
+6) Dentro de ella crear el archivo index.js
+7) instalar nodemon
+ npm i nodemon -D -> este modulo sera creado como una dependencia de desarrollo
+ 
+8) Ir a package.json -> crear el comando dev(o el nombre que nosotros queremos)
+	en script poner: 
+	  "scripts": {
+    "start": "node src",  //arranca el servidor
+    "dev": "nodemon src"
+  },
+9) npm run dev ejecutamos el servidor
+
+10)En index comentar a desarrollar 
+
+*Podemos ejecutar el archivo index, poniendo por consola node src -> node busca el archivo llamado index 
+dentro de la carpeta y lo ejecuta.
+
+*Para que se vea en la web lo que hacemos con node, hay que configurar esto:
+//routes
+app.get('/', (req, res)=>{         
+    res.sendFile(path.join(__dirname, 'views/index.html'))
+})
+Cada vez que ingreso a la ruta inicial(app.get), lo manejo a travez de una funcion(req, res), voy a responder 
+con un archivo(res.sendFile), y ese archivo se encuentra en una direccion(path.join )
+
+*dirname-> devuelve el archivo que lo ejecuta. En este caso lo ejecuto del archivo index:
+valor de dirname: D:\nodeJs\node_firstwebsite\src
+
+*path -> permite que identifique con que SO estoy trabajando y transforma la ruta correspondiente que le paso 
+por en dirname:
+D:\nodeJs\node_firstwebsite\src\views\index.html -> esta es la correcta ruta(que necesita windows)
+
+*view engine-> motor de plantilla/motor de vista -> usamos el motor ejs
+<%= %> ->me permite agregar codigo al html
+Pero debo configurar la ruta donde se encuentra el archivo index.ejs -> app.set('views', path.join(__dirname,'views'))
+
+*en el h1 ejecuto codigo de JavaScript
+*le paso el nombre de la variable. Esto se lo paso del servidor al navedador
+*Cuando veo el codigo fuente, se ve codigo html solamente. 
+
+*creo unca carpeta routes, con un archivo index.js -> para poder generar todas las rutas necesarias
+*Luego las importo a mi index gral del proyect
+
+*Por cada vez que quiero una pagina, debo agregar una ruta. 
+
+*app.engine('html',require('ejs').renderFile) -> le digo que voy a utilizar los archivos html, pero seran procesados
+por ejs(motor de plantilla)
+
+*ctrl k + ctrl f -> formatear el codigo y que se vea mejor
+
+*Dentro de views creo una carpeta partials, y dentro de ella un archivo navigation.html:
+ahi pego todo el nav
+
+*en el body  <%- include ('partials/navigation.html')%> ->con esto incluimos todo el codigo que tiene navigation.html
+
+*<%- include ('partials/head.html')%> dedemos ponerlo en el index y tambien en contact
+
+*Desplegar 
+
+ npm install -g now 
