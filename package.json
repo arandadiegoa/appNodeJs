@@ -4,8 +4,7 @@
   "description": "Primera App con node",
   "main": "index.js",
   "scripts": {
-    "start": "node src",
-    "dev": "nodemon src"
+    "start": "nodemon index.js"
   },
   "author": "Diego Aranda",
   "license": "ISC",

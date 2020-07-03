@@ -5,7 +5,7 @@ Primera APP con Node
 3) iniciar el proyecto npm init 
 4) instalar dependencias : 
 	npm i express ejs morgan. Express + ejs(motor de plantillas)
-5) Crear carpeta scc -> arranca el servidor
+5) Crear carpeta src -> arranca el servidor
 6) Dentro de ella crear el archivo index.js
 7) instalar nodemon
  npm i nodemon -D -> este modulo sera creado como una dependencia de desarrollo

@@ -2,6 +2,7 @@ const express = require('express')  //llamo el modulo
 const app = express()  // app es el servidor
 const path = require('path')
 
+
 //settings
 app.set('port', 1308)
 app.set('views', path.join(__dirname,'views'))
