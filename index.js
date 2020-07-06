@@ -4,7 +4,10 @@ const path = require('path')
 
 
 //settings
-app.set('port', 1308)
+//app.set('port', 1308)
+app.set('port', process.env.PORT || 1308)
+
+
 app.set('views', path.join(__dirname,'views'))
 app.engine('html',require('ejs').renderFile)
 app.set('wiew engine', 'ejs')
